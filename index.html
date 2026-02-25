@@ -8,7 +8,7 @@
 
 <!-- Navbar -->
 <nav class="navbar">
-    <h2>🌍 Smart Tourism</h2>
+    <h2>Smart Tourism</h2>
 </nav>
 
 <!-- Main Container -->
@@ -22,55 +22,79 @@
             <select name="state" required>
                 <option value="">--Select State--</option>
                 <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
                 <option>Goa</option>
-                <option>Kerala</option>
-                <option>Rajasthan</option>
-                <option>Karnataka</option>
-                <option>Tamil Nadu</option>
-                <option>Maharashtra</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
                 <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
             </select>
 
             <label>Budget:</label>
-            <select name="budget">
+            <select name="budget" required>
+                <option value="">--Select Budget--</option>
                 <option>Low</option>
                 <option>Medium</option>
                 <option>High</option>
             </select>
 
             <label>Duration (days):</label>
-            <select name="duration">
-                <option>1</option>
+            <select name="duration" required>
+                <option value="">--Select Duration--</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
-                <option>6</option>
             </select>
 
             <label>Motivation:</label>
-            <select name="motivation">
-                <option>Adventure</option>
-                <option>Relax</option>
-                <option>Luxury</option>
-                <option>Spiritual</option>
+            <select name="motivation" required>
+                <option value="">--Select Motivation--</option>
                 <option>Nature</option>
+                <option>Spiritual</option>
+                <option>Relax</option>
+                <option>History</option>
+                <option>Adventure</option>
+                <option>Luxury</option>
+                <option>Culture</option>
             </select>
 
             <label>Group:</label>
-            <select name="group">
+            <select name="group" required>
+                <option value="">--Select Group--</option>
                 <option>Solo</option>
                 <option>Family</option>
                 <option>Couple</option>
                 <option>Friends</option>
             </select>
 
-            <button type="submit">✨ Recommend Now</button>
+            <button type="submit">Recommend Now</button>
         </form>
 
         {% if result %}
         <div class="result-box">
-            <h2>🎯 Recommended Place:</h2>
+            <h2>Recommended Place:</h2>
             <p>{{ result }}</p>
         </div>
         {% endif %}
