@@ -5,28 +5,35 @@ from sklearn.preprocessing import LabelEncoder
 
 app = Flask(__name__)
 
-# 1. Load data
+# ----------------- LOAD AND ENCODE DATA -----------------
+
+# Read CSV
 data = pd.read_csv("tourism.csv")
 
-# 2. Encode categorical columns
+# Create encoders dict
 encoders = {}
+
+# Encode ONLY categorical columns as strings
 for col in data.columns:
-    if data[col].dtype == "object":
+    if col != "Duration":  # Duration is numeric in your CSV
         le = LabelEncoder()
-        data[col] = le.fit_transform(data[col])
+        data[col] = le.fit_transform(data[col].astype(str))
         encoders[col] = le
 
-# 3. Split features and target
+# Features and target
 X = data.drop("Place", axis=1)
 y = data["Place"]
 
-# 4. Train model
+# Train model
 model = DecisionTreeClassifier()
 model.fit(X, y)
+
+# ----------------- FLASK ROUTE -----------------
 
 @app.route("/", methods=["GET", "POST"])
 def home():
     result = None
+
     if request.method == "POST":
         state = request.form["state"]
         budget = request.form["budget"]
@@ -34,21 +41,21 @@ def home():
         motivation = request.form["motivation"]
         group = request.form["group"]
 
-        # Create DataFrame from user input
+        # Create one-row DataFrame
         user_input = pd.DataFrame(
             [[state, budget, duration, motivation, group]],
             columns=["State", "Budget", "Duration", "Motivation", "Group"]
         )
 
-        # Apply the same encoders to user input
-        for col in user_input.columns:
-            if col in encoders and user_input[col].dtype == "object":
-                user_input[col] = encoders[col].transform(user_input[col])
+        # Encode using SAME encoders
+        for col in ["State", "Budget", "Motivation", "Group"]:
+            user_input[col] = encoders[col].transform(user_input[col].astype(str))
 
+        # Duration is already int, no encoding
         # Predict
         prediction = model.predict(user_input)
 
-        # Decode predicted place
+        # Decode place
         predicted_place = encoders["Place"].inverse_transform(prediction)
         result = predicted_place[0]
 
