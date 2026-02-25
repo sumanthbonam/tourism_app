@@ -1,0 +1,251 @@
+State,Budget,Duration,Motivation,Group,Place
+
+Andhra Pradesh,Medium,3,Spiritual,Family,Tirupati
+Andhra Pradesh,Low,2,Nature,Friends,Araku Valley
+
+Arunachal Pradesh,Medium,4,Nature,Friends,Tawang
+Arunachal Pradesh,High,5,Adventure,Couple,Ziro
+
+Assam,Medium,3,Nature,Family,Kaziranga
+Assam,Low,2,Relax,Friends,Majuli
+
+Bihar,Low,2,Spiritual,Solo,Bodh Gaya
+Bihar,Medium,3,History,Family,Nalanda
+
+Chhattisgarh,Medium,3,Nature,Friends,Chitrakote Falls
+Chhattisgarh,Low,2,Adventure,Friends,Tirathgarh
+
+Goa,High,4,Relax,Friends,Calangute
+Goa,Medium,3,Adventure,Couple,Baga
+
+Gujarat,Medium,3,History,Family,Statue of Unity
+Gujarat,High,5,Spiritual,Couple,Dwarka
+
+Haryana,Low,2,History,Family,Panipat
+Haryana,Medium,3,Nature,Friends,Sultanpur
+
+Himachal Pradesh,Medium,4,Nature,Couple,Shimla
+Himachal Pradesh,High,5,Adventure,Friends,Manali
+
+Jharkhand,Low,2,Nature,Friends,Netarhat
+Jharkhand,Medium,3,Adventure,Family,Betla
+
+Karnataka,High,5,Adventure,Friends,Coorg
+Karnataka,Medium,3,Relax,Couple,Gokarna
+
+Kerala,High,5,Relax,Couple,Alleppey
+Kerala,Medium,3,Nature,Family,Munnar
+
+Madhya Pradesh,Medium,3,History,Family,Khajuraho
+Madhya Pradesh,Low,2,Nature,Friends,Pachmarhi
+
+Maharashtra,High,5,Luxury,Couple,Mumbai
+Maharashtra,Medium,3,Nature,Family,Mahabaleshwar
+
+Manipur,Medium,3,Nature,Friends,Loktak Lake
+Manipur,Low,2,Adventure,Friends,Kangla
+
+Meghalaya,Medium,4,Nature,Couple,Cherrapunji
+Meghalaya,Low,2,Adventure,Friends,Dawki
+
+Mizoram,Medium,3,Nature,Family,Aizawl
+Mizoram,Low,2,Adventure,Friends,Reiek
+
+Nagaland,Medium,3,Culture,Friends,Kohima
+Nagaland,Low,2,Nature,Family,Dzukou Valley
+
+Odisha,Medium,3,Spiritual,Family,Puri
+Odisha,Low,2,Nature,Friends,Chilika Lake
+
+Punjab,Medium,3,Spiritual,Family,Amritsar
+Punjab,Low,2,History,Friends,Jallianwala Bagh
+
+Rajasthan,Medium,3,History,Family,Jaipur
+Rajasthan,High,5,Luxury,Couple,Udaipur
+
+Sikkim,Medium,4,Nature,Couple,Gangtok
+Sikkim,Low,2,Adventure,Friends,Lachung
+
+Tamil Nadu,Medium,3,Nature,Family,Ooty
+Tamil Nadu,Low,2,Spiritual,Solo,Rameshwaram
+
+Telangana,Medium,3,History,Family,Hyderabad
+Telangana,Low,2,Nature,Friends,Warangal
+
+Tripura,Medium,3,History,Family,Ujjayanta Palace
+Tripura,Low,2,Nature,Friends,Unakoti
+
+Uttar Pradesh,Medium,3,History,Family,Agra
+Uttar Pradesh,Low,2,Spiritual,Solo,Varanasi
+
+Uttarakhand,Medium,4,Nature,Friends,Nainital
+Uttarakhand,High,5,Adventure,Couple,Auli
+
+West Bengal,Medium,3,Nature,Family,Darjeeling
+West Bengal,Low,2,Relax,Friends,Digha
+Andhra Pradesh,High,4,Relax,Couple,Visakhapatnam
+Andhra Pradesh,Medium,3,History,Family,Lepakshi
+
+Arunachal Pradesh,Low,3,Adventure,Friends,Bomdila
+Arunachal Pradesh,Medium,4,Nature,Couple,Itanagar
+
+Assam,High,4,Nature,Couple,Guwahati
+Assam,Medium,3,Adventure,Friends,Haflong
+
+Bihar,Medium,3,Spiritual,Family,Patna Sahib
+Bihar,High,4,History,Couple,Vaishali
+
+Chhattisgarh,High,4,Nature,Couple,Barnawapara
+Chhattisgarh,Medium,3,Adventure,Friends,Mainpat
+
+Goa,Low,2,Relax,Friends,Colva
+Goa,Medium,3,Luxury,Couple,Panaji
+
+Gujarat,Low,2,Nature,Friends,Gir National Park
+Gujarat,Medium,3,History,Family,Rann of Kutch
+
+Haryana,High,4,Relax,Couple,Morni Hills
+Haryana,Medium,3,History,Family,Kurukshetra
+
+Himachal Pradesh,Low,3,Nature,Friends,Dalhousie
+Himachal Pradesh,Medium,4,Adventure,Couple,Spiti Valley
+
+Jharkhand,High,4,Nature,Couple,Hazaribagh
+Jharkhand,Medium,3,Adventure,Friends,Deoghar
+
+Karnataka,Low,2,Nature,Friends,Badami
+Karnataka,Medium,4,History,Family,Halebidu
+
+Kerala,Low,2,Nature,Friends,Varkala
+Kerala,Medium,4,Adventure,Couple,Idukki
+
+Madhya Pradesh,High,4,History,Couple,Gwalior
+Madhya Pradesh,Medium,3,Nature,Friends,Kanha
+
+Maharashtra,Low,2,Adventure,Friends,Panchgani
+Maharashtra,Medium,4,Relax,Couple,Shirdi
+
+Manipur,High,4,Nature,Couple,Ukhrul
+Manipur,Medium,3,Culture,Friends,Imphal
+
+Meghalaya,High,4,Adventure,Couple,Mawlynnong
+Meghalaya,Medium,3,Nature,Friends,Nongriat
+
+Mizoram,High,4,Nature,Couple,Champhai
+Mizoram,Medium,3,Adventure,Friends,Lunglei
+
+Nagaland,High,4,Culture,Couple,Mon
+Nagaland,Medium,3,Nature,Friends,Mokokchung
+
+Odisha,High,4,History,Couple,Konark
+Odisha,Medium,3,Nature,Friends,Simlipal
+
+Punjab,High,4,History,Couple,Patiala
+Punjab,Medium,3,Nature,Family,Anandpur Sahib
+
+Rajasthan,Low,2,Adventure,Friends,Pushkar
+Rajasthan,Medium,4,History,Family,Bikaner
+
+Sikkim,High,5,Adventure,Couple,Yumthang
+Sikkim,Medium,3,Nature,Friends,Pelling
+
+Tamil Nadu,High,4,Relax,Couple,Chennai
+Tamil Nadu,Medium,3,Nature,Family,Coonoor
+
+Telangana,High,4,History,Couple,Warangal Fort
+Telangana,Medium,3,Nature,Friends,Nagarjuna Sagar
+
+Tripura,High,4,History,Couple,Neermahal
+Tripura,Medium,3,Nature,Friends,Jampui Hills
+
+Uttar Pradesh,High,4,History,Couple,Lucknow
+Uttar Pradesh,Medium,3,Nature,Family,Ayodhya
+
+Uttarakhand,Low,2,Adventure,Friends,Jim Corbett
+Uttarakhand,Medium,4,Spiritual,Family,Kedarnath
+
+West Bengal,High,4,Nature,Couple,Sundarbans
+West Bengal,Medium,3,History,Family,Kolkata
+Andhra Pradesh,Medium,3,Relax,Family,Vijayawada
+Andhra Pradesh,High,4,Adventure,Friends,Horsley Hills
+
+Arunachal Pradesh,Medium,4,Nature,Friends,Dirang
+Arunachal Pradesh,High,5,Adventure,Couple,Pasighat
+
+Assam,Medium,3,Spiritual,Family,Kamakhya
+Assam,High,4,Nature,Couple,Dibrugarh
+
+Bihar,Low,2,History,Friends,Rohtas
+Bihar,Medium,3,Spiritual,Family,Gaya
+
+Chhattisgarh,Medium,3,Nature,Family,Kanger Valley
+Chhattisgarh,High,4,Adventure,Couple,Sirpur
+
+Goa,Medium,3,Relax,Family,Varca
+Goa,High,4,Adventure,Friends,Arambol
+
+Gujarat,Medium,3,Spiritual,Family,Somnath
+Gujarat,High,4,Nature,Couple,Saputara
+
+Haryana,Medium,3,Nature,Friends,Damdama Lake
+Haryana,High,4,History,Couple,Faridabad
+
+Himachal Pradesh,Medium,4,Relax,Family,Kufri
+Himachal Pradesh,High,5,Adventure,Friends,Bir Billing
+
+Jharkhand,Medium,3,Nature,Family,Ranchi
+Jharkhand,High,4,Adventure,Couple,Parasnath
+
+Karnataka,Medium,3,Relax,Family,Udupi
+Karnataka,High,5,Adventure,Couple,Kudremukh
+
+Kerala,Medium,3,Spiritual,Family,Guruvayur
+Kerala,High,5,Nature,Couple,Kumarakom
+
+Madhya Pradesh,Medium,3,History,Family,Sanchi
+Madhya Pradesh,High,4,Nature,Couple,Bhedaghat
+
+Maharashtra,Medium,3,History,Family,Aurangabad
+Maharashtra,High,5,Relax,Couple,Tarkarli
+
+Manipur,Medium,3,Nature,Family,Moreh
+Manipur,High,4,Adventure,Couple,Chandel
+
+Meghalaya,Medium,3,Relax,Family,Shillong
+Meghalaya,High,4,Adventure,Couple,Laitlum
+
+Mizoram,Medium,3,Nature,Family,Serchhip
+Mizoram,High,4,Adventure,Couple,Kolasib
+
+Nagaland,Medium,3,Culture,Family,Wokha
+Nagaland,High,4,Nature,Couple,Phek
+
+Odisha,Medium,3,History,Family,Bhubaneswar
+Odisha,High,4,Nature,Couple,Daringbadi
+
+Punjab,Medium,3,Relax,Family,Ludhiana
+Punjab,High,4,Spiritual,Couple,Tarn Taran
+
+Rajasthan,Medium,3,History,Family,Ajmer
+Rajasthan,High,5,Adventure,Couple,Ranthambore
+
+Sikkim,Medium,3,Nature,Family,Namchi
+Sikkim,High,5,Adventure,Couple,Gurudongmar
+
+Tamil Nadu,Medium,3,History,Family,Madurai
+Tamil Nadu,High,4,Relax,Couple,Pondicherry
+
+Telangana,Medium,3,Spiritual,Family,Bhadrachalam
+Telangana,High,4,Nature,Couple,Adilabad
+
+Tripura,Medium,3,Nature,Family,Sepahijala
+Tripura,High,4,History,Couple,Amarpur
+
+Uttar Pradesh,Medium,3,Spiritual,Family,Mathura
+Uttar Pradesh,High,4,History,Couple,Allahabad
+
+Uttarakhand,Medium,3,Nature,Family,Chopta
+Uttarakhand,High,5,Adventure,Couple,Valley of Flowers
+
+West Bengal,Medium,3,Relax,Family,Kalimpong
+West Bengal,High,4,Nature,Couple,Mirik
