@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Tourism Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>🌍 Smart Tourism</h2>
+</nav>
+
+<!-- Main Container -->
+<div class="main-wrapper">
+    <div class="container">
+        <h1>Find Your Perfect Destination</h1>
+
+        <form method="POST">
+
+            <label>Select State:</label>
+            <select name="state" required>
+                <option value="">--Select State--</option>
+                <option>Andhra Pradesh</option>
+                <option>Goa</option>
+                <option>Kerala</option>
+                <option>Rajasthan</option>
+                <option>Karnataka</option>
+                <option>Tamil Nadu</option>
+                <option>Maharashtra</option>
+                <option>Himachal Pradesh</option>
+            </select>
+
+            <label>Budget:</label>
+            <select name="budget">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <label>Duration (days):</label>
+            <select name="duration">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+
+            <label>Motivation:</label>
+            <select name="motivation">
+                <option>Adventure</option>
+                <option>Relax</option>
+                <option>Luxury</option>
+                <option>Spiritual</option>
+                <option>Nature</option>
+            </select>
+
+            <label>Group:</label>
+            <select name="group">
+                <option>Solo</option>
+                <option>Family</option>
+                <option>Couple</option>
+                <option>Friends</option>
+            </select>
+
+            <button type="submit">✨ Recommend Now</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <h2>🎯 Recommended Place:</h2>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+</body>
+</html>
