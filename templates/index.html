@@ -1,106 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Smart Tourism Recommender</title>
+    <title>Plan My Peace</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <h2>Smart Tourism</h2>
-</nav>
+<div class="page">
 
-<!-- Main Container -->
-<div class="main-wrapper">
-    <div class="container">
-        <h1>Find Your Perfect Destination</h1>
+    <!-- Left panel with image / title -->
+    <div class="panel">
+        <div class="panel__visible">
+            <div class="panel__back">
+                <img src="/static/Kashmir.webp" class="panel__img" alt="Travel">
+            </div>
 
-        <form method="POST">
-
-            <label>Select State:</label>
-            <select name="state" required>
-                <option value="">--Select State--</option>
-                <option>Andhra Pradesh</option>
-                <option>Arunachal Pradesh</option>
-                <option>Assam</option>
-                <option>Bihar</option>
-                <option>Chhattisgarh</option>
-                <option>Goa</option>
-                <option>Gujarat</option>
-                <option>Haryana</option>
-                <option>Himachal Pradesh</option>
-                <option>Jharkhand</option>
-                <option>Karnataka</option>
-                <option>Kerala</option>
-                <option>Madhya Pradesh</option>
-                <option>Maharashtra</option>
-                <option>Manipur</option>
-                <option>Meghalaya</option>
-                <option>Mizoram</option>
-                <option>Nagaland</option>
-                <option>Odisha</option>
-                <option>Punjab</option>
-                <option>Rajasthan</option>
-                <option>Sikkim</option>
-                <option>Tamil Nadu</option>
-                <option>Telangana</option>
-                <option>Tripura</option>
-                <option>Uttar Pradesh</option>
-                <option>Uttarakhand</option>
-                <option>West Bengal</option>
-            </select>
-
-            <label>Budget:</label>
-            <select name="budget" required>
-                <option value="">--Select Budget--</option>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select>
-
-            <label>Duration (days):</label>
-            <select name="duration" required>
-                <option value="">--Select Duration--</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-
-            <label>Motivation:</label>
-            <select name="motivation" required>
-                <option value="">--Select Motivation--</option>
-                <option>Nature</option>
-                <option>Spiritual</option>
-                <option>Relax</option>
-                <option>History</option>
-                <option>Adventure</option>
-                <option>Luxury</option>
-                <option>Culture</option>
-            </select>
-
-            <label>Group:</label>
-            <select name="group" required>
-                <option value="">--Select Group--</option>
-                <option>Solo</option>
-                <option>Family</option>
-                <option>Couple</option>
-                <option>Friends</option>
-            </select>
-
-            <button type="submit">Recommend Now</button>
-        </form>
-
-        {% if result %}
-        <div class="result-box">
-            <h2>Recommended Place:</h2>
-            <p>{{ result }}</p>
+            <div class="panel__content panel__content--main">
+                <h1 class="panel__title">Plan My Peace</h1>
+                <p class="panel__subtitle">Smart tourism suggestion based on your mood, budget and group.</p>
+            </div>
         </div>
-        {% endif %}
-
     </div>
+
+    <!-- Right panel with form -->
+    <div class="panel panel--form">
+        <div class="panel__visible">
+            <div class="panel__content panel__content--form">
+                <h2 class="form__title">Find Your Destination</h2>
+
+                <form method="POST" class="form">
+                    <label class="form__label">State</label>
+                    <select name="state" class="form__input" required>
+                        <option value="">--Select State--</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                    </select>
+
+                    <label class="form__label">Budget</label>
+                    <select name="budget" class="form__input" required>
+                        <option value="">--Select Budget--</option>
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                    </select>
+
+                    <label class="form__label">Duration (days)</label>
+                    <select name="duration" class="form__input" required>
+                        <option value="">--Select Duration--</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+
+                    <label class="form__label">Motivation</label>
+                    <select name="motivation" class="form__input" required>
+                        <option value="">--Select Motivation--</option>
+                        <option>Nature</option>
+                        <option>Spiritual</option>
+                        <option>Relax</option>
+                        <option>History</option>
+                        <option>Adventure</option>
+                        <option>Luxury</option>
+                        <option>Culture</option>
+                    </select>
+
+                    <label class="form__label">Group</label>
+                    <select name="group" class="form__input" required>
+                        <option value="">--Select Group--</option>
+                        <option>Solo</option>
+                        <option>Family</option>
+                        <option>Couple</option>
+                        <option>Friends</option>
+                    </select>
+
+                    <button type="submit" class="form__btn">Recommend Now</button>
+                </form>
+
+                {% if result %}
+                <div class="result-box">
+                    <div class="result-header">Recommended Place</div>
+                    <div class="result-content">{{ result }}</div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    // Simple entry animation by adding classes
+    window.addEventListener("load", () => {
+        const backs = document.querySelectorAll(".panel__back");
+        const contents = document.querySelectorAll(".panel__content");
+
+        backs.forEach(b => b.classList.add("animate"));
+        contents.forEach(c => c.classList.add("animateContent"));
+    });
+</script>
 
 </body>
 </html>
