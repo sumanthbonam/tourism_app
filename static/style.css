@@ -1,226 +1,237 @@
-/* Full page background */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: url("/static/Kashmir.webp") no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    overflow-x: hidden;
+body, html {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #65A192;
 }
 
-/* Dark overlay */
-body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    z-index: -1;
+/* Page layout */
+.page {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 40px;
-    color: #00e5ff;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
-    animation: navbarGlow 2s infinite alternate;
+/* Panel base */
+.panel {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
 }
 
-@keyframes navbarGlow {
-    from {
-        box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
-    }
-    to {
-        box-shadow: 0 0 18px rgba(0, 229, 255, 0.9);
-    }
+/* Left panel (image + title) */
+.panel__visible {
+  position: relative;
+  overflow: hidden;
 }
 
-/* Center wrapper */
-.main-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 60px);
-    padding: 20px;
+.panel__title {
+  margin-top: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-/* Glass card */
-.container {
-    width: 100%;
-    max-width: 450px;
-    padding: 30px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(16px);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.37),
-        0 0 18px rgba(0, 229, 255, 0.4);
-    color: white;
-    animation: fadeIn 0.8s ease-out, cardPulse 3s infinite alternate;
-    box-sizing: border-box;
+.panel__subtitle {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 14px;
 }
 
-/* Card slight breathing effect */
-@keyframes cardPulse {
-    from {
-        transform: translateY(0);
-        box-shadow:
-            0 8px 32px rgba(0, 0, 0, 0.37),
-            0 0 10px rgba(0, 229, 255, 0.3);
-    }
-    to {
-        transform: translateY(-4px);
-        box-shadow:
-            0 12px 36px rgba(0, 0, 0, 0.5),
-            0 0 22px rgba(0, 229, 255, 0.7);
-    }
+/* Content blocks */
+.panel__content {
+  padding: 20px 26px;
+  background-color: white;
+  z-index: 10;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+.panel__content--main {
+  min-width: 280px;
+  background: linear-gradient(135deg, #33A192, #65A192);
+  color: white;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #00ffdf;
-    text-shadow: 0 0 8px rgba(0, 255, 223, 0.8);
+/* Right panel form content */
+.panel--form .panel__content--form {
+  min-width: 320px;
+  max-width: 380px;
+  background-color: #ffffff;
 }
 
-/* Form layout */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Overlays & animation classes */
+.panel__back {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 0;
+  width: 110%;
+  transform: translate(70%, -50%);
 }
 
-/* Smooth fade for labels */
-label {
-    font-weight: bold;
-    font-size: 14px;
-    opacity: 0.9;
-    transition: color 0.3s, transform 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.panel__back.animate {
+  animation: move 2s forwards;
 }
 
-label:hover {
-    color: #00e5ff;
-    transform: translateX(2px);
+/* Back image */
+.panel__img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
 }
 
-/* Inputs */
-select {
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    transition: box-shadow 0.25s, transform 0.2s, background 0.25s;
+/* Sliding main content */
+.panel__content.animateContent {
+  animation: movePanel 2s forwards;
 }
 
-/* Focus effect */
-select:focus {
-    box-shadow: 0 0 0 2px rgba(0, 198, 255, 0.8);
-    transform: translateY(-1px);
-    background: rgba(0, 0, 0, 0.8);
+/* Keyframes from example */
+@keyframes movePanel {
+  0%, 30% {
+    transform: translateX(0%);
+  }
+  35%, 100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(70%, -50%);
+    z-index: 0;
+  }
+  15% {
+    transform: translate(140%, -50%);
+    z-index: 10;
+  }
+  75% {
+    transform: translate(-120%, -50%);
+    z-index: 10;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+
+/* Form styles */
+.form {
+  box-sizing: border-box;
+}
+
+.form__title {
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  color: #33A192;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.form__label {
+  display: block;
+  color: #3D3D3D;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.form__input {
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 2px #D6D6D6;
+  border: none;
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form__input:focus {
+  box-shadow: none;
+  outline-color: #33A192;
 }
 
 /* Button */
-button {
-    margin-top: 15px;
-    padding: 12px;
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+.form__btn {
+  margin-top: 0.8em;
+  margin-bottom: 0.5em;
+  display: block;
+  width: 100%;
+  background-color: #33A192;
+  color: white;
+  border: none;
+  padding: 0.6em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
 }
 
-button:hover {
-    transform: translateY(-1px) scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6),
-                0 0 18px rgba(0, 229, 255, 0.9);
-    opacity: 0.97;
+.form__btn:hover {
+  background-color: #278471;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
 }
 
-/* Result Box */
+/* Result box */
 .result-box {
-    margin-top: 20px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 12px;
-    text-align: center;
-    animation: fadeIn 0.6s ease-out;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.5),
-                0 0 12px rgba(0, 255, 223, 0.5);
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #f2fffb;
+  border: 1px solid #33A192;
+  box-shadow: 0 0 8px rgba(51, 161, 146, 0.4);
 }
 
-.result-box h2 {
-    color: #00e5ff;
-    margin-bottom: 8px;
+.result-header {
+  color: #278471;
+  font-size: 15px;
+  margin-bottom: 4px;
+  font-weight: bold;
 }
 
-.result-box p {
-    font-size: 20px;
-    color: #00ffdf;
-    text-shadow: 0 0 6px rgba(0, 255, 223, 0.9);
+.result-content {
+  font-size: 18px;
+  color: #1c5d4e;
 }
 
-/* --------- Responsive for mobiles & small screens --------- */
-@media (max-width: 600px) {
-    .navbar {
-        padding: 10px 15px;
-        font-size: 18px;
-    }
+/* Responsive */
+@media (max-width: 850px) {
+  .page {
+    flex-direction: column;
+  }
 
-    .main-wrapper {
-        padding: 10px;
-        min-height: auto;
-    }
+  .panel {
+    margin: 5px 0;
+  }
 
-    .container {
-        padding: 20px;
-        border-radius: 16px;
-    }
+  .panel__content--main,
+  .panel--form .panel__content--form {
+    width: 100%;
+    max-width: 90vw;
+  }
 
-    h1 {
-        font-size: 20px;
-    }
+  .panel__back {
+    display: none; /* hide sliding image on very small screens to avoid overlap */
+  }
 
-    label {
-        font-size: 13px;
-    }
-
-    select {
-        font-size: 13px;
-        padding: 8px;
-    }
-
-    button {
-        font-size: 15px;
-        padding: 10px;
-    }
+  .panel__content.animateContent {
+    animation: none;
+    transform: none;
+  }
 }
