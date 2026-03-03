@@ -4,6 +4,8 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: url("/static/Kashmir.webp") no-repeat center center fixed;
     background-size: cover;
+    color: white;
+    overflow-x: hidden;
 }
 
 /* Dark overlay */
@@ -22,12 +24,25 @@ body::before {
 .navbar {
     background: rgba(0, 0, 0, 0.7);
     padding: 15px 40px;
-    color: white;
+    color: #00e5ff;
     font-size: 20px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+    animation: navbarGlow 2s infinite alternate;
+}
+
+@keyframes navbarGlow {
+    from {
+        box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+    }
+    to {
+        box-shadow: 0 0 18px rgba(0, 229, 255, 0.9);
+    }
 }
 
 /* Center wrapper */
@@ -45,15 +60,33 @@ body::before {
     max-width: 450px;
     padding: 30px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.37),
+        0 0 18px rgba(0, 229, 255, 0.4);
     color: white;
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.8s ease-out, cardPulse 3s infinite alternate;
     box-sizing: border-box;
 }
 
-/* Animation */
+/* Card slight breathing effect */
+@keyframes cardPulse {
+    from {
+        transform: translateY(0);
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.37),
+            0 0 10px rgba(0, 229, 255, 0.3);
+    }
+    to {
+        transform: translateY(-4px);
+        box-shadow:
+            0 12px 36px rgba(0, 0, 0, 0.5),
+            0 0 22px rgba(0, 229, 255, 0.7);
+    }
+}
+
+/* Fade-in animation */
 @keyframes fadeIn {
     from {opacity: 0; transform: translateY(20px);}
     to {opacity: 1; transform: translateY(0);}
@@ -62,6 +95,10 @@ body::before {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00ffdf;
+    text-shadow: 0 0 8px rgba(0, 255, 223, 0.8);
 }
 
 /* Form layout */
@@ -77,6 +114,13 @@ label {
     font-size: 14px;
     opacity: 0.9;
     transition: color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+label:hover {
+    color: #00e5ff;
+    transform: translateX(2px);
 }
 
 /* Inputs */
@@ -87,13 +131,16 @@ select {
     outline: none;
     font-size: 14px;
     box-sizing: border-box;
-    transition: box-shadow 0.3s, transform 0.2s;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    transition: box-shadow 0.25s, transform 0.2s, background 0.25s;
 }
 
 /* Focus effect */
 select:focus {
-    box-shadow: 0 0 0 2px rgba(0, 198, 255, 0.6);
+    box-shadow: 0 0 0 2px rgba(0, 198, 255, 0.8);
     transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Button */
@@ -107,23 +154,39 @@ button {
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
 
 button:hover {
-    transform: translateY(-1px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    opacity: 0.95;
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6),
+                0 0 18px rgba(0, 229, 255, 0.9);
+    opacity: 0.97;
 }
 
 /* Result Box */
 .result-box {
     margin-top: 20px;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 12px;
     text-align: center;
     animation: fadeIn 0.6s ease-out;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.5),
+                0 0 12px rgba(0, 255, 223, 0.5);
+}
+
+.result-box h2 {
+    color: #00e5ff;
+    margin-bottom: 8px;
+}
+
+.result-box p {
+    font-size: 20px;
+    color: #00ffdf;
+    text-shadow: 0 0 6px rgba(0, 255, 223, 0.9);
 }
 
 /* --------- Responsive for mobiles & small screens --------- */
