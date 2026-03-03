@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Plan My Peace</title>
+    <title>Smart Tourism</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -15,9 +15,11 @@
                 <img src="/static/Kashmir.webp" class="panel__img" alt="Travel">
             </div>
 
-            <div class="panel__content panel__content--main">
-                <h1 class="panel__title">Plan My Peace</h1>
-                <p class="panel__subtitle">Smart tourism suggestion based on your mood, budget and group.</p>
+            <div class="panel__content panel__content--main animateContent">
+                <h1 class="panel__title">Smart Tourism</h1>
+                <p class="panel__subtitle">
+                    Smart tourism suggestions based on your state, budget, duration and group.
+                </p>
             </div>
         </div>
     </div>
@@ -25,7 +27,7 @@
     <!-- Right panel with form -->
     <div class="panel panel--form">
         <div class="panel__visible">
-            <div class="panel__content panel__content--form">
+            <div class="panel__content panel__content--form animateContent">
                 <h2 class="form__title">Find Your Destination</h2>
 
                 <form method="POST" class="form">
@@ -109,7 +111,6 @@
                     <div class="result-content">{{ result }}</div>
                 </div>
                 {% endif %}
-
             </div>
         </div>
     </div>
@@ -117,13 +118,10 @@
 </div>
 
 <script>
-    // Simple entry animation by adding classes
+    // Optional: trigger image slide once
     window.addEventListener("load", () => {
         const backs = document.querySelectorAll(".panel__back");
-        const contents = document.querySelectorAll(".panel__content");
-
         backs.forEach(b => b.classList.add("animate"));
-        contents.forEach(c => c.classList.add("animateContent"));
     });
 </script>
 
