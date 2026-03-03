@@ -28,12 +28,13 @@ body, html {
   margin: 10px;
 }
 
-/* Left panel (image + title) */
+/* Visible container */
 .panel__visible {
   position: relative;
   overflow: hidden;
 }
 
+/* Left main text */
 .panel__title {
   margin-top: 0.5em;
   margin-bottom: 0.4em;
@@ -58,20 +59,21 @@ body, html {
   border-radius: 8px;
 }
 
+/* Left card (title) */
 .panel__content--main {
   min-width: 280px;
   background: linear-gradient(135deg, #33A192, #65A192);
   color: white;
 }
 
-/* Right panel form content */
+/* Right card (form) */
 .panel--form .panel__content--form {
   min-width: 320px;
   max-width: 380px;
   background-color: #ffffff;
 }
 
-/* Overlays & animation classes */
+/* Back image */
 .panel__back {
   position: absolute;
   z-index: 0;
@@ -85,28 +87,29 @@ body, html {
   animation: move 2s forwards;
 }
 
-/* Back image */
 .panel__img {
   width: 100%;
   display: block;
   border-radius: 8px;
 }
 
-/* Sliding main content */
+/* New safe animation for cards */
 .panel__content.animateContent {
-  animation: movePanel 2s forwards;
+  animation: fadeSlideIn 0.8s ease-out forwards;
 }
 
-/* Keyframes from example */
-@keyframes movePanel {
-  0%, 30% {
-    transform: translateX(0%);
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
   }
-  35%, 100% {
-    transform: translateX(-100%);
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+/* Background image slide (optional flair) */
 @keyframes move {
   0% {
     transform: translate(70%, -50%);
@@ -227,11 +230,10 @@ body, html {
   }
 
   .panel__back {
-    display: none; /* hide sliding image on very small screens to avoid overlap */
+    display: none; /* hide sliding image on very small screens */
   }
 
   .panel__content.animateContent {
-    animation: none;
-    transform: none;
+    animation: fadeSlideIn 0.6s ease-out forwards;
   }
 }
